@@ -73,9 +73,9 @@ public class UserDetails {
 	
 	@Override
 	public String toString() {
-		return "AddressBook [firstName=" + firstName + " lastName=" + lastName +
-				"Address = "+address+" city=" + city + " state=" + state
-				+ ", zipCode=" + zip + ", mobileNo=" + mobileNo + ", email=" + email + "]";
+		return "\tAddressBook"+"\nfirstName=" + firstName + "\nlastName=" + lastName +
+				"\nAddress = "+address+"\ncity=" + city + "\nstate=" + state
+				+ "\nzipCode=" + zip + "\nmobileNo=" + mobileNo + "\nemail=" + email;
 	}
 	
 }
