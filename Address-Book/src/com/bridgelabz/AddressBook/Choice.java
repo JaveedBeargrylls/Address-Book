@@ -17,10 +17,14 @@ public class Choice {
 		String mobileNo;
 		String email;
 		
-	public Integer choice(int choice) {
+	public Integer choice() {
 		
-		while(true) {
+		System.out.println("1. Add Details 2. Update Details 3. Delete Details 4. Show Details");
+
+		int choice = sc.nextInt();
+		
 			switch(choice) {
+			
 			case 1: System.out.println("Add Details");
 			System.out.println("Enter how many contacts to be added to the AddressBook");
 			int num=sc.nextInt();
@@ -106,7 +110,52 @@ public class Choice {
 			}
 			System.out.println("Details Updated");
 			break;
-			}	
+			
+			case 3: System.out.println("Delete Details");
+			
+			System.out.println("Enter the first name to delete that contact");
+			firstName = sc.next();
+			
+			for(int i = 0; i < count; i++)
+			{
+				if(arr[i].getFirstName() == firstName)
+				{
+					arr[i] = null;
+				}
+			}
+			System.out.println("Deleted the details");
+			break;
+			
+			case 4: System.out.println("Show the Details");
+				for(int i = 0; i < count; i++)
+				{
+					System.out.println(arr[i]);
+				}
+			
+			return choice;	
+			
+			default: System.out.println("Invalid entered valid choice");
+			break;
+			}
+			return choice;
 		}
 	}
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
